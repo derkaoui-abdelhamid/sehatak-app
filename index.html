@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تطبيق صحتك</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🩺 صحتك</h1>
+            <p>مساعدك الطبي الذكي لولايات الجزائر</p>
+        </header>
+
+        <section class="input-card">
+            <label>اختر ولايتك:</label>
+            <select id="city-select">
+                <option value="">-- اختر الولاية --</option>
+                <option value="الجزائر العاصمة">16- الجزائر العاصمة</option>
+                <option value="وهران">31- وهران</option>
+                <option value="قسنطينة">25- قسنطينة</option>
+                <option value="سطيف">19- سطيف</option>
+                <option value="عنابة">23- عنابة</option>
+                </select>
+
+            <label>بماذا تشعر؟</label>
+            <textarea id="symptom-input" placeholder="اكتب: صداع أو زكام..."></textarea>
+            <button id="analyze-btn">تحليل الحالة</button>
+        </section>
+
+        <section id="results-container" class="hidden">
+            <div class="result-box diagnosis">
+                <h4>🔍 التشخيص:</h4>
+                <p id="diagnosis-text"></p>
+            </div>
+            <div class="result-box natural-remedy">
+                <h4>🌿 نصيحة طبيعية:</h4>
+                <p id="remedy-text"></p>
+            </div>
+            <div class="result-box doctors">
+                <h4>👨‍⚕️ أطباء في <span id="user-city-display"></span>:</h4>
+                <div id="doctors-list"></div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
